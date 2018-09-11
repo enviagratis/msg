@@ -19,7 +19,10 @@
 			
 			function limpa(){
 				$("#pagina1").hide();
-			   $("#pagina2").hide();
+			    $("#pagina2").hide();
+			    $("#pagina3").hide();
+			    $("#pagina4").hide();
+			    $("#pagina5").hide();				
 			}
 			
 			function mostra(idpagina){
@@ -37,6 +40,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+	background-color: #f1f1f1;
 }
 
 /* Style the header */
@@ -109,7 +113,7 @@ footer {
 
 
 <header>
-  <h2 id="titulo">Pagina1</h2>
+  <h2 id="titulo">pagina1</h2>
 </header>
 
 <section>
@@ -136,6 +140,76 @@ footer {
 	</div> 
   
   
+	<div class="container" id="pagina3" style="display:none;">
+<div class="card card-login mx-auto mt-5">
+      <div class="card-header">Login</div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox"> Remember Password</label>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-block" href="index.html">Login</a>
+        </form>
+        <div class="text-center">
+          <a class="d-block small mt-3" href="register.html">Register an Account</a>
+          <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+        </div>
+      </div>
+    </div>
+	</div> 
+	<div class="container" id="pagina4" style="display:none;">
+	  <div class="row">
+			<div class="col-lg-8">
+			  <!-- Example Bar Chart Card-->
+			  <div class="card mb-3">
+				<div class="card-header">
+				  <i class="fa fa-bar-chart"></i> Bar Chart Example</div>
+				<div class="card-body">
+				  <canvas id="myBarChart" width="100" height="50"></canvas>
+				</div>
+				<div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+			  </div>
+			</div>
+			<div class="col-lg-4">
+			  <!-- Example Pie Chart Card-->
+			  <div class="card mb-3">
+				<div class="card-header">
+				  <i class="fa fa-pie-chart"></i> Pie Chart Example</div>
+				<div class="card-body">
+				  <canvas id="myPieChart" width="100%" height="100"></canvas>
+				</div>
+				<div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+			  </div>
+			</div>
+	</div> 
+	
+	<div class="container" id="pagina5" style="display:none;">
+		<div class="row">
+			<div class="col-lg-4">
+			  <!-- Example Pie Chart Card-->
+			  <div class="card mb-3">
+				<div class="card-header">
+				  <i class="fa fa-pie-chart"></i> Pie Chart Example</div>
+				<div class="card-body">
+				  <canvas id="myPieChart" width="100%" height="100"></canvas>
+				</div>
+				<div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+			  </div>
+			</div>
+		</div>
+	</div> 	
+  
 </section>
 
 
@@ -149,31 +223,31 @@ footer {
 
   
 			<div class="col-xs-3 mx-auto" style="padding:0px 0px 0px 15px;">
-				<a class="fb-ic" onclick="mostra('pagina2');">
+				<a class="fb-ic" onclick="mostra('pagina1');">
 				<i class="fab fa-facebook fa-lg white-text mr-md-5 mr-3 fa-1.5x"> </i>
 				</a>
 			</div>
 			
 			<div class="col-xs-3 mx-auto">
-				<a class="tw-ic" onclick="mostra('pagina1');">
+				<a class="tw-ic" onclick="mostra('pagina2');">
 				  <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-1.5x"> </i>
 				</a>
 			</div>
 			
 			<div class="col-xs-3 mx-auto">
-				<a class="gplus-ic">
+				<a class="gplus-ic" onclick="mostra('pagina3');">
 				  <i class="fab fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-1.5x"> </i>
 				</a>
 			</div>
 			
 			<div class="col-xs-3 mx-auto">
-				<a class="li-ic">
+				<a class="li-ic" onclick="mostra('pagina4');">
 				  <i class="fab fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-1.5x"> </i>
 				</a>
 			</div>
 
 			<div class="col-xs-3 mx-auto">
-				<a class="li-ic">
+				<a class="li-ic" onclick="mostra('pagina5');">
 				  <i class="fab fa-pinterest fa-lg white-text mr-md-5 mr-3 fa-1.5x"> </i>
 				</a>
 			</div>
