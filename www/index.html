@@ -24,6 +24,8 @@
 			
 			function mostra(idpagina){
 			   limpa();
+			   var t = document.getElementById('titulo');
+			   t.innerHTML = idpagina;
 			   $("#"+idpagina).show();
 			}
 		</script>
@@ -107,7 +109,7 @@ footer {
 
 
 <header>
-  <h2>Layout</h2>
+  <h2 id="titulo">Pagina1</h2>
 </header>
 
 <section>
