@@ -14,7 +14,10 @@
 			}
 			function msg(){
 			   navigator.notification.alert('You are the winner!', alertDismissed,'me Over','Done')
+			}
 			
+			function not(){
+    			window.FirebasePlugin.subscribe("example");
 			}
 			
 			function limpa(){
@@ -31,6 +34,19 @@
 			   t.innerHTML = idpagina;
 			   $("#"+idpagina).show();
 			}
+			
+			function loadDoc() {
+			     alert('sfsfsd');
+				  var xhttp = new XMLHttpRequest();
+				  xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+					  document.getElementById("demo").innerHTML =
+					  this.responseText;
+					}
+				  };
+				  xhttp.open("GET", "ajax_info.txt", true);
+				  xhttp.send();
+				}
 		</script>
 		
 		<style>
@@ -122,7 +138,10 @@ footer {
 	<div class="container" id="pagina1">
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+	<button onclick="not();" class="btn btn-info">Notificação</button>
 	</div> 
+	
+	
 
  	<div class="container" id="pagina2" style="display:none;">
 	<ul>
@@ -159,7 +178,7 @@ footer {
                 <input class="form-check-input" type="checkbox"> Remember Password</label>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="index.html">Login</a>
+          <a class="btn btn-primary btn-block" onclick="loadDoc();">Login</a>
         </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="register.html">Register an Account</a>
